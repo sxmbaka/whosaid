@@ -10,20 +10,20 @@ class ChatSearchBar extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(100),
-        color: Color.fromARGB(255, 54, 53, 53),
+        color: const Color.fromARGB(255, 54, 53, 53),
       ),
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 18),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
       child: Row(
         children: [
-          Icon(
+          const Icon(
             Icons.search,
             color: Color.fromARGB(255, 194, 189, 189),
           ),
-          Gap(10),
+          const Gap(10),
           Text(
             "Search...",
             style: GoogleFonts.robotoCondensed(
-              color: Color.fromARGB(255, 194, 189, 189),
+              color: const Color.fromARGB(255, 194, 189, 189),
               fontSize: 20,
             ),
           )

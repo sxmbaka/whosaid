@@ -42,10 +42,10 @@ class _ChatTileState extends State<ChatTile> {
   @override
   void initState() {
     if (widget.chat.isMute) {
-      statusIcons.add(MutedChatIndicator());
+      statusIcons.add(const MutedChatIndicator());
     }
     if (widget.chat.isPinned) {
-      statusIcons.add(PinnedChatIndicator());
+      statusIcons.add(const PinnedChatIndicator());
     }
     if (widget.chat.numberOfUnreads >= 0) {
       statusIcons.add(

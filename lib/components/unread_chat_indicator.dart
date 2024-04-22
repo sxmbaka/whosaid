@@ -15,14 +15,15 @@ class UnreadChatIndicator extends StatelessWidget {
         return "";
       } else if (numberOfUnreads > 9) {
         return "9+";
-      } else
+      } else {
         return numberOfUnreads.toString();
+      }
     }
 
     return Container(
       width: 25,
       height: 25,
-      margin: EdgeInsets.only(left: 8),
+      margin: const EdgeInsets.only(left: 8),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(100),
         color: Colors.green[400],

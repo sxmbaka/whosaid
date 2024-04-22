@@ -23,7 +23,7 @@ class _UpdatesPageState extends State<UpdatesPage> {
         ),
       ),
       backgroundColor: Colors.red,
-      body: Center(
+      body: const Center(
         child: Text("Updates"),
       ),
     );

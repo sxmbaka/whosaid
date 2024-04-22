@@ -29,13 +29,13 @@ class _ChatsPageState extends State<ChatsPage> {
       ),
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(8),
+        padding: const EdgeInsets.all(8),
         child: Column(
           children: [
-            ChatSearchBar(),
+            const ChatSearchBar(),
             ChatTile(
               chat: Chat(
-                timeStamp: DateTime.now().subtract(Duration(days: 30)),
+                timeStamp: DateTime.now().subtract(const Duration(days: 30)),
                 chatName: "Mirgi",
                 isGroupChat: false,
                 isMute: false,
@@ -47,7 +47,7 @@ class _ChatsPageState extends State<ChatsPage> {
             ),
             ChatTile(
               chat: Chat(
-                timeStamp: DateTime.now().subtract(Duration(days: 30)),
+                timeStamp: DateTime.now().subtract(const Duration(days: 30)),
                 numberOfUnreads: 0,
                 chatName: "Mirgi",
                 isGroupChat: false,
@@ -61,7 +61,7 @@ class _ChatsPageState extends State<ChatsPage> {
             ChatTile(
               chat: Chat(
                 chatName: "Mirgi",
-                timeStamp: DateTime.now().subtract(Duration(days: 30)),
+                timeStamp: DateTime.now().subtract(const Duration(days: 30)),
                 isGroupChat: false,
                 isMute: true,
                 numberOfUnreads: 8,
@@ -75,7 +75,7 @@ class _ChatsPageState extends State<ChatsPage> {
               chat: Chat(
                 chatName: "Mirgi",
                 isGroupChat: false,
-                timeStamp: DateTime.now().subtract(Duration(days: 1)),
+                timeStamp: DateTime.now().subtract(const Duration(days: 1)),
                 isMute: true,
                 isPinned: false,
                 lastRecieved: false,
@@ -87,7 +87,7 @@ class _ChatsPageState extends State<ChatsPage> {
               chat: Chat(
                 chatName: "Miyagi",
                 isGroupChat: false,
-                timeStamp: DateTime.now().subtract(Duration(hours: 17)),
+                timeStamp: DateTime.now().subtract(const Duration(hours: 17)),
                 isMute: false,
                 numberOfUnreads: 1000,
                 isPinned: false,
@@ -96,8 +96,8 @@ class _ChatsPageState extends State<ChatsPage> {
                 sentMessageStatus: SentMessageStatus.sentNotReceived,
               ),
             ),
-            Placeholder(),
-            Placeholder(),
+            const Placeholder(),
+            const Placeholder(),
           ],
         ),
       ),

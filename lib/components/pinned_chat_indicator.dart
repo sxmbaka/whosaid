@@ -8,8 +8,8 @@ class PinnedChatIndicator extends StatelessWidget {
     return Container(
       width: 20,
       height: 20,
-      margin: EdgeInsets.only(left: 5),
-      child: Icon(
+      margin: const EdgeInsets.only(left: 5),
+      child: const Icon(
         Icons.push_pin,
         color: Colors.grey,
       ),

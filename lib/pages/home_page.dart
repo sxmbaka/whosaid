@@ -6,7 +6,7 @@ import 'package:whosaid/pages/communities_page.dart';
 import 'package:whosaid/pages/updates_page.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
