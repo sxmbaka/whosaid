@@ -12,6 +12,7 @@ class Chat {
   DateTime timeStamp;
   String imagePath;
   bool hasPfp;
+  int numberOfUnreads;
 
   Chat({
     required this.chatName,
@@ -21,8 +22,10 @@ class Chat {
     required this.lastRecieved,
     required this.lastRecievedMessage,
     required this.sentMessageStatus,
+    required this.timeStamp,
+
     this.imagePath = "assets/images/default-profile-photo.png",
     this.hasPfp = false,
-    required this.timeStamp,
+    this.numberOfUnreads = -1,
   });// : timeStamp = DateTime.now();
 }

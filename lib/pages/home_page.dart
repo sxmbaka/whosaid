@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
               text: "Chats",
             ),
             GButton(
-              icon: Icons.change_circle_outlined,
+              icon: Icons.maps_ugc_rounded,
               iconColor: Colors.white,
               text: "Updates",
             ),

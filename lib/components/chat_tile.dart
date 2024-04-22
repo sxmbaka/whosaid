@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:whosaid/components/muted_chat_indicator.dart';
+import 'package:whosaid/components/pinned_chat_indicator.dart';
+import 'package:whosaid/components/unread_chat_indicator.dart';
 import 'package:whosaid/models/chat.dart';
 
 class ChatTile extends StatefulWidget {
@@ -16,6 +19,8 @@ class ChatTile extends StatefulWidget {
 }
 
 class _ChatTileState extends State<ChatTile> {
+  Color _timeStampColor = Colors.grey;
+
   String formatTimeStamp(DateTime timeStamp) {
     final now = DateTime.now();
     final difference = now.difference(timeStamp);
@@ -30,6 +35,29 @@ class _ChatTileState extends State<ChatTile> {
       // If timestamp is over 48 hours ago, display date in dd/mm/yy format
       return DateFormat('dd/MM/yy').format(timeStamp);
     }
+  }
+
+  List<Widget> statusIcons = [];
+
+  @override
+  void initState() {
+    if (widget.chat.isMute) {
+      statusIcons.add(MutedChatIndicator());
+    }
+    if (widget.chat.isPinned) {
+      statusIcons.add(PinnedChatIndicator());
+    }
+    if (widget.chat.numberOfUnreads >= 0) {
+      statusIcons.add(
+        UnreadChatIndicator(
+          numberOfUnreads: widget.chat.numberOfUnreads,
+        ),
+      );
+      if (widget.chat.numberOfUnreads > 0) {
+        _timeStampColor = Colors.green.shade400;
+      }
+    }
+    super.initState();
   }
 
   @override
@@ -78,8 +106,12 @@ class _ChatTileState extends State<ChatTile> {
                 Text(
                   formatTimeStamp(widget.chat.timeStamp),
                   style: GoogleFonts.robotoCondensed(
-                    color: Colors.white,
+                    color: _timeStampColor,
                   ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: statusIcons,
                 )
               ],
             ),

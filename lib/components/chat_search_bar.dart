@@ -12,7 +12,7 @@ class ChatSearchBar extends StatelessWidget {
         borderRadius: BorderRadius.circular(100),
         color: Color.fromARGB(255, 54, 53, 53),
       ),
-      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 18),
+      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 18),
       child: Row(
         children: [
           Icon(
