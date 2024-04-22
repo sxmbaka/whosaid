@@ -39,29 +39,26 @@ class _HomePageState extends State<HomePage> {
           activeColor: Colors.green.shade300,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           gap: 5,
+          iconSize: MediaQuery.of(context).size.width / 15,
           tabs: const [
             GButton(
               icon: Icons.chat,
               iconColor: Colors.white,
-              iconSize: 35,
               text: "Chats",
             ),
             GButton(
               icon: Icons.change_circle_outlined,
               iconColor: Colors.white,
-              iconSize: 35,
               text: "Updates",
             ),
             GButton(
               icon: Icons.groups,
               iconColor: Colors.white,
-              iconSize: 35,
               text: "Communities",
             ),
             GButton(
               icon: Icons.call_outlined,
               iconColor: Colors.white,
-              iconSize: 35,
               text: "Calls",
             ),
           ],

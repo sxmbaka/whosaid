@@ -11,6 +11,9 @@ class ChatsPage extends StatefulWidget {
 }
 
 class _ChatsPageState extends State<ChatsPage> {
+
+  // List<Widget> Chat
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,11 +30,7 @@ class _ChatsPageState extends State<ChatsPage> {
       backgroundColor: Colors.black,
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            ChatSearchBar(),
-          ],
-        ),
+        child: Placeholder(),
       ),
     );
   }
