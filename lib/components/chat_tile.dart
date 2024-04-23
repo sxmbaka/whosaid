@@ -67,9 +67,21 @@ class _ChatTileState extends State<ChatTile> {
       height: MediaQuery.of(context).size.height / 11,
       child: Row(
         children: [
-          Image.asset(
-            widget.chat.imagePath,
-            color: widget.chat.hasPfp ? null : Colors.white,
+          Container(
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+            ),
+            width: 60, // Adjust the width to make it circular
+            height: 60, // Adjust the height to make it circular
+            child: ClipOval(
+              clipBehavior:
+                  Clip.hardEdge, // Ensure child is clipped to rounded shape
+              child: Image.asset(
+                widget.chat.imagePath,
+                color: widget.chat.hasPfp ? null : Colors.white,
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
           const Gap(10),
           SizedBox(

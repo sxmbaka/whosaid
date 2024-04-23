@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
           activeColor: Colors.green.shade300,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           gap: 5,
-          iconSize: MediaQuery.of(context).size.width / 15,
+          iconSize: 30,
           tabs: const [
             GButton(
               icon: Icons.chat,
@@ -75,6 +75,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       body: PageView(
+        physics: ClampingScrollPhysics(),
         onPageChanged: (value) {
           setState(() {
             _selectedIndexForPage = value;

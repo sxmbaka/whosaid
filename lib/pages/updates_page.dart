@@ -21,6 +21,7 @@ class _UpdatesPageState extends State<UpdatesPage> {
             fontSize: 30,
           ),
         ),
+        actions: <Widget>[],
       ),
       backgroundColor: Colors.red,
       body: const Center(

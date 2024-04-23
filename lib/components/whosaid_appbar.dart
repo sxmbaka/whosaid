@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 class WhoSaidAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Text title;
-  // final List<Widget> actions;
+  final List<Widget> actions;
 
   const WhoSaidAppBar({
     super.key,
     required this.title,
-    // required this.actions,
+    required this.actions,
   });
 
   @override
@@ -23,6 +23,17 @@ class WhoSaidAppBar extends StatelessWidget implements PreferredSizeWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: <Widget>[
           title,
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 8),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  ...actions,
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );

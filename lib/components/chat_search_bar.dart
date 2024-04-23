@@ -13,21 +13,10 @@ class ChatSearchBar extends StatelessWidget {
         color: const Color.fromARGB(255, 54, 53, 53),
       ),
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
-      child: Row(
-        children: [
-          const Icon(
-            Icons.search,
-            color: Color.fromARGB(255, 194, 189, 189),
-          ),
-          const Gap(10),
-          Text(
-            "Search...",
-            style: GoogleFonts.robotoCondensed(
-              color: const Color.fromARGB(255, 194, 189, 189),
-              fontSize: 20,
-            ),
-          )
-        ],
+      child: SearchBar(
+        backgroundColor: MaterialStateProperty.all<Color>(const Color.fromARGB(255, 54, 53, 53)),
+        elevation: MaterialStatePropertyAll(0),
+        side: MaterialStatePropertyAll(BorderSide.none),
       ),
     );
   }

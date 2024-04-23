@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:whosaid/pages/home_page.dart';
 
@@ -13,6 +14,7 @@ class WhoSaidApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "WhoSaid",
+      scrollBehavior: CupertinoScrollBehavior(),
       home: HomePage(),
     );
   }
