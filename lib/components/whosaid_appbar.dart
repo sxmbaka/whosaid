@@ -1,4 +1,7 @@
+import 'package:easy_search_bar/easy_search_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class WhoSaidAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Text title;
@@ -12,30 +15,25 @@ class WhoSaidAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height / 3,
-      color: Colors.black,
-      padding: const EdgeInsets.only(
-        left: 16,
-        right: 16,
+    return EasySearchBar(
+      systemOverlayStyle: const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
       ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: <Widget>[
-          title,
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.only(bottom: 8),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  ...actions,
-                ],
-              ),
-            ),
-          )
-        ],
+      title: title,
+      iconTheme: const IconThemeData(color: Colors.white),
+      onSearch: (p0) {},
+      backgroundColor: Colors.green.shade400,
+      actions: actions,
+      putActionsOnRight: true,
+      foregroundColor: Colors.white,
+      searchBackgroundColor: Colors.green.shade400,
+      searchCursorColor: Colors.white,
+      searchHintText: 'Search...',
+      searchHintStyle: GoogleFonts.robotoCondensed(
+        color: Colors.white60,
+        fontSize: 20,
       ),
+      openOverlayOnSearch: true,
     );
   }
 
